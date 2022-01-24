@@ -1,8 +1,13 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
+import { default as Router} from './routes';
 
 function App() {
   return (
-    <div>Jedi OR Sith</div>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   );
 }
 
