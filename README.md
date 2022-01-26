@@ -6,8 +6,10 @@
 
 A web application used to choose your path of force and your master.
 There are two path:
-- The Light Side, and your master is Luke Skywalker
-- The Dark Side, and your master is Darth Vader
+- The Light Side, and your master is Luke Skywalker.
+- The Dark Side, and your master is Darth Vader.
+
+The project is hosted by Netlify and can be accessed [here](https://adoring-roentgen-5370a5.netlify.app)
 
 ---
 
