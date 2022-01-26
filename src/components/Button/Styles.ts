@@ -6,7 +6,7 @@ export interface ButtonProps {
     onClick(): void;
 }
 
-const Button = styled.button`
+export const Button = styled.button`
     max-width: 347px;
     padding: 0 16px;
     height: 56px;
@@ -43,5 +43,3 @@ const Button = styled.button`
         cursor: not-allowed;
     }
 `;
-
-export default { Button };

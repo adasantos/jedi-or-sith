@@ -6,12 +6,12 @@ interface pathProps {
     path: string;
 }
 
-const Link = styled(LinkRouter) `
+export const Link = styled(LinkRouter) `
     display: flex;
     align-items: center;
 `;
 
-const IconArrowLeft = styled(FiArrowLeft) `
+export const IconArrowLeft = styled(FiArrowLeft) `
     ${({ path }: pathProps) => path === 'dark' && (
         css `
             color: #FFFFFF;
@@ -25,7 +25,7 @@ const IconArrowLeft = styled(FiArrowLeft) `
     )}
 `;
 
-const Text = styled.span `
+export const Text = styled.span `
     margin-left: 16px;
     font-size: 1.25em;
     line-height: 22px;
@@ -43,5 +43,3 @@ const Text = styled.span `
         `
     )}
 `;
-
-export default {Link, IconArrowLeft, Text};

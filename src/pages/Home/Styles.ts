@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.main `
+export const Container = styled.main `
     max-width: 800px;
     margin: 210px auto 8px auto;
     padding: 0 32px;
@@ -14,7 +14,7 @@ const Container = styled.main `
     }
 `;
 
-const TitleContent = styled.header `
+export const TitleContent = styled.header `
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +32,7 @@ const TitleContent = styled.header `
     }
 `;
 
-const Subtitle = styled.h4 `
+export const Subtitle = styled.h4 `
     font-weight: 400;
     text-align:center;
     margin-bottom: 162px;
@@ -43,7 +43,7 @@ const Subtitle = styled.h4 `
     color: #2c97d1;
 `;
 
-const Button = styled.button `
+export const Button = styled.button `
     padding: 0 32px;
     height: 56px;
     font-weight: 700;
@@ -61,5 +61,3 @@ const Button = styled.button `
         opacity: 0.8;
     }
 `;
-
-export default { Container,TitleContent, Subtitle, Button };

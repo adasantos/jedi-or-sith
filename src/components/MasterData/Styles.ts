@@ -4,13 +4,13 @@ interface pathProps {
     path: string;
 }
 
-const Container = styled.div `
+export const Container = styled.div `
     display: flex;
     flex-direction: column;
     align-items: center;
 `;
 
-const Image = styled.img `
+export const Image = styled.img `
     width: 302px;
     height: 302px;
     border-radius: 50%;
@@ -22,7 +22,7 @@ const Image = styled.img `
     }
 `;
 
-const DescriptionContainer = styled.div `
+export const DescriptionContainer = styled.div `
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,7 +35,7 @@ const DescriptionContainer = styled.div `
     }
 `;
 
-const Text = styled.span `
+export const Text = styled.span `
     font-weight: 400;
     font-size: 2.25em;
     line-height: 44px;
@@ -57,7 +57,7 @@ const Text = styled.span `
     }
 `;
 
-const MasterName = styled.span `
+export const MasterName = styled.span `
     font-weight: 700;
     font-size: 2.25em;
     line-height: 44px;
@@ -74,5 +74,3 @@ const MasterName = styled.span `
         `
     )}
 `;
-
-export default { Container, Image, DescriptionContainer, Text, MasterName };

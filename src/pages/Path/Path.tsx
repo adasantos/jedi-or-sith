@@ -7,7 +7,7 @@ import MasterData from '../../components/MasterData';
 
 import useFetch from '../../hooks/useFetch';
 
-import Styles from './Styles';
+import {Content, Header, Container} from './Styles';
 
 const Path: React.FC = () => {
     const navigate = useNavigate();
@@ -21,11 +21,11 @@ const Path: React.FC = () => {
     }, [error, navigate]);
 
     return path && (
-        <Styles.Content path={path}>
-                <Styles.Header>
+        <Content path={path}>
+                <Header>
                     <BackButton path={path} routeNavigate='/' />
-                </Styles.Header>
-                <Styles.Container>
+                </Header>
+                <Container>
                     <MasterData path={path} masterName={data}/>
                     <Button
                         onClick={choiceYourPath}
@@ -33,8 +33,8 @@ const Path: React.FC = () => {
                         text='choose your path again, Padawan'
                         disabled={loading}
                     />
-                </Styles.Container>
-        </Styles.Content>
+                </Container>
+        </Content>
     )
 }
 

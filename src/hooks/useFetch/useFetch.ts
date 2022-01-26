@@ -21,7 +21,6 @@ const useFetch = () => {
         await Promise
             .race([getJediPath(), getSithPath()])
             .then((response) => {
-                console.log(response.data);
                 setData(response.data.name);
             })
             .catch((err) => {

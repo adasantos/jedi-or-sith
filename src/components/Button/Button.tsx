@@ -1,4 +1,4 @@
-import Styles, { ButtonProps } from './Styles';
+import { Button as StyledButton, ButtonProps } from './Styles';
 
 interface ButtonTesteProps extends ButtonProps {
     text: string;
@@ -6,7 +6,7 @@ interface ButtonTesteProps extends ButtonProps {
 
 function Button ({ onClick, path, disabled, text, ...rest}: ButtonTesteProps) {
     return (
-        <Styles.Button
+        <StyledButton
             {...rest}
             type='button'
             onClick={onClick}
@@ -14,7 +14,7 @@ function Button ({ onClick, path, disabled, text, ...rest}: ButtonTesteProps) {
             disabled={disabled}
         >
             {text}
-        </Styles.Button>
+        </StyledButton>
     )
 }
 

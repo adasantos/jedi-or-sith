@@ -1,4 +1,4 @@
-import Styles from './Styles';
+import {Link, IconArrowLeft, Text} from './Styles';
 
 interface BackButtonProps {
     path: string;
@@ -7,10 +7,10 @@ interface BackButtonProps {
 
 function BackButton(props: BackButtonProps) {
     return (
-        <Styles.Link to={props.routeNavigate}>
-            <Styles.IconArrowLeft path={props.path} size='40' />
-            <Styles.Text path={props.path}>back</Styles.Text>
-        </Styles.Link>
+        <Link to={props.routeNavigate}>
+            <IconArrowLeft path={props.path} size='40' />
+            <Text path={props.path}>back</Text>
+        </Link>
     )
 }
 
