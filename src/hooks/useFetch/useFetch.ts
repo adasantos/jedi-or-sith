@@ -2,12 +2,8 @@ import { useEffect, useState } from 'react';
 
 import api from '../../services/api';
 
-type SideOfTheForceProps = {
-    name: string;
-}
-
 const useFetch = () => {
-    const [ data, setData ] = useState<SideOfTheForceProps>({} as SideOfTheForceProps);
+    const [ data, setData ] = useState('');
     const [ loading, setLoading ] = useState(false);
     const [ error, setError ] = useState(null);
 
@@ -20,11 +16,13 @@ const useFetch = () => {
     }
         
     async function choiceYourPath() {
+        setLoading(true);
+
         await Promise
             .race([getJediPath(), getSithPath()])
             .then((response) => {
                 console.log(response.data);
-                setData(response.data);
+                setData(response.data.name);
             })
             .catch((err) => {
                 setError(err);
@@ -35,19 +33,18 @@ const useFetch = () => {
     }
 
     useEffect(() => {
-        setLoading(true);
-
         choiceYourPath();
-    // Disable react-hooks/exhaustive-deps, beacause it only need load one time
-    // eslint-disable-next-line    
-    }, []);
 
+        // Disable react-hooks/exhaustive-deps, beacause it only need load one time
+        // eslint-disable-next-line    
+    }, []);
 
     return {
         data,
         loading,
         error,
-        choiceYourPath
+        choiceYourPath,
+        setLoading,
     }
 }
 

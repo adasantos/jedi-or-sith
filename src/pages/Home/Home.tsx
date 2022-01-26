@@ -1,14 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+import Styles from './Styles';
 
 const Home: React.FC = () => {
+    const navigate = useNavigate();
+
+    function handleStart() {
+        navigate('/path');
+    }
+
     return (
-        <>
-            <h1>Home</h1>
-            <Link to="/path">
-                <button>Escolher caminho</button>
-            </Link>
-        </>
+        <Styles.Container>
+            <Styles.TitleContent>
+                <h1>Welcome to <strong>iClinic</strong></h1>
+            </Styles.TitleContent>
+            <Styles.Subtitle>
+                FrontEnd Challenge
+            </Styles.Subtitle>
+            <Styles.Button onClick={handleStart}>Start</Styles.Button>
+        </Styles.Container>
     )
 }
 
