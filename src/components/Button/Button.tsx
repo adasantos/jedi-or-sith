@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Styles, { ButtonProps } from './Styles';
 
 interface ButtonTesteProps extends ButtonProps {

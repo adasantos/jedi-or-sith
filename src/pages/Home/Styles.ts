@@ -33,6 +33,7 @@ const TitleContent = styled.header `
 `;
 
 const Subtitle = styled.h4 `
+    font-weight: 400;
     text-align:center;
     margin-bottom: 162px;
     font-size: 0.875em;
